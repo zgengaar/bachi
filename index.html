@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basta 🎮</title>
+</head>
+
+<body>
+
+<h1>🎮 Basta</h1>
+
+<p id="estado">Conectando con Supabase...</p>
+
+<script type="module">
+  import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+  const SUPABASE_URL = "https://bmmaudfbctafoylmcixs.supabase.co/rest/v1/";
+
+  const SUPABASE_KEY = "sb_publishable_XCrqUtpN5TQ-5gsvoceYqw_CFr78I_J";
+
+  const supabase = createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+  );
+
+  document.getElementById("estado").textContent =
+    "✅ Supabase está conectado";
+</script>
+
+</body>
+</html>
